@@ -15,8 +15,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <FilterableList files={this.props.files} />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          filterOption={this.state.filterOptions}
+        />
+        <FilterableList
+          files={this.props.files}
+          searchTerm={this.state.searchTerm}
+          filterOption={this.state.filterOptions}
+        />
       </div>
     );
   }
