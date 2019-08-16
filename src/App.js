@@ -4,6 +4,14 @@ import FilterableList from "./FilterableList/FilterableList";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: "",
+      filterOption: "All"
+    };
+  }
+
   render() {
     return (
       <div className="App">
