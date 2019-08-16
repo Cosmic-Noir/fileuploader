@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import "./App.css";
 import SearchBar from "./SearchBar/SearchBar";
 import FilterableList from "./FilterableList/FilterableList";
-import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -17,12 +17,12 @@ class App extends Component {
       <div className="App">
         <SearchBar
           searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOptions}
+          filterOption={this.state.filterOption}
         />
         <FilterableList
           files={this.props.files}
           searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOptions}
+          filterOption={this.state.filterOption}
         />
       </div>
     );
